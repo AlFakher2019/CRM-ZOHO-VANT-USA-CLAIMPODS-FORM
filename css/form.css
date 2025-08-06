@@ -105,7 +105,7 @@ ol, ul {
     border: 1px solid rgba(184, 187, 211, 1);
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 5px;
     font-size: 15px;
     color: rgb(37, 44, 62);
@@ -137,6 +137,7 @@ ol, ul {
 .zf-errorMessage {
 	font: 15px Arial, Helvetica, sans-serif;
     color: #f41033;
+	position: absolute;
     padding-top: 10px;
 }
 
@@ -215,7 +216,7 @@ ol, ul {
 	padding:0;
 }
 .zf-tempFrmWrapper .zf-labelName {
-	font-weight: 400;
+	font-weight: 300;
     font-size: 14px;
     color: #000000;
 }
@@ -223,7 +224,7 @@ ol, ul {
 	padding: 9px 10px 10px 5px;
 	background: #fff;
     border: 1px solid rgba(184, 187, 211, 1);
-    border-radius: 4px;
+    border-radius: 10px;
     font-size: 16px;
     height: 60px;
     transition: 0.3s;
@@ -254,7 +255,7 @@ ol, ul {
     overflow: visible !important;
     word-break: break-all;
     padding: 8px 0px 8px 0px;
-    font-weight: 500;
+    font-weight: 300;
 	}
 .zf-phone .zf-tempContDiv label, .zf-date .zf-tempContDiv label, .zf-time .zf-tempContDiv label, .zf-address .zf-tempContDiv label, .zf-name .zf-tempContDiv span label {
 	color: #000000;
@@ -473,7 +474,7 @@ ol, ul {
 }
 .zf-tempContDiv input[type="radio"] {
 	-webkit-appearance: none;
-	border: 1.2px solid #47476b;
+	border: 1.2px solid rgb(0, 0, 0);
 	border-radius: 50%;
 	width: 20px;
 	height: 20px;
@@ -484,7 +485,7 @@ ol, ul {
 .zf-tempContDiv input[type="checkbox"] {
 	-webkit-appearance: none;
 	border-radius: 3px;
-    border: 1.2px solid #47476b;
+    border: 1.2px solid rgb(0, 0, 0);
     transition: 0.5s ease all;
 	position: relative;
 	width: 20px;
@@ -571,7 +572,7 @@ ol, ul {
     padding: 0 0 0 32px;
     cursor: pointer;
     font-size: 15px;
-    color: #47476b;
+    color: rgb(0, 0, 0);
 }
 .zf-oneColumns .zf-tempContDiv span {
 	margin:0 0 16px 0;
@@ -615,7 +616,7 @@ ol, ul {
     margin: 0 0 0 32px;
     padding: 0;
     font-size: 15px;
-    color: #47476b;
+    color: rgb(0, 0, 0);
 }
 .zf-twoColumns .zf-tempContDiv span {
 	margin: 0 4% 16px 0;
@@ -653,7 +654,7 @@ ol, ul {
     margin: 0 0 0 32px;
     padding: 0;
     font-size: 15px;
-    color: #47476b;
+    color: rgb(0, 0, 0);
 }
 .zf-threeColumns .zf-tempContDiv span {
 	margin: 0 1% 15px 0;
@@ -690,7 +691,7 @@ ol, ul {
     margin: 0 0 0 32px;
     padding: 0;
     font-size: 15px;
-    color: #47476b;
+    color: rgb(0, 0, 0);
 }
 
 .zf-mSelect select { 
@@ -698,7 +699,7 @@ ol, ul {
     border: 1px solid rgba(184, 187, 211, 1);
     overflow: auto;
     border-radius: 4px;
-    color: #47476b;
+    color: rgb(0, 0, 0);
     outline: none;
     box-sizing: border-box;
     height: 101px;
@@ -1466,7 +1467,7 @@ width: 223px;
   align-items: center;
   border: 1px solid #ccc;
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 12px;
   background-color: #ffffff;
   transition: border 0.3s ease;
@@ -1534,6 +1535,10 @@ width: 223px;
   .zf-threeColumns .zf-tempContDiv span {
     width: 100% !important;
     box-sizing: border-box;
+  }
+  .zf-form-sBox {
+	display: flex;
+	width: 100% !important;
   }
 }
 .zf-overflow{
