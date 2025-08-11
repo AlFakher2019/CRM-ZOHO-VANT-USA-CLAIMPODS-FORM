@@ -110,7 +110,7 @@ ol, ul {
 
 .zf-tempContDiv input[type="text"], .zf-tempContDiv textarea, .zf-tempContDiv .zf-pdfTextArea {
 	background: #fff;
-    border: 1px solid rgba(184, 187, 211, 1);
+    border: 1px solid #9C9EA3;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 10px;
@@ -146,7 +146,7 @@ ol, ul {
 	font: 15px Arial, Helvetica, sans-serif;
     color: #f41033;
 	position: absolute;
-    padding-top: 10px;
+    padding-top: 0px;
 }
 
 /**********Mandatory Message***********/	
@@ -197,7 +197,7 @@ ol, ul {
 	font-family: 'HW vant';
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 23px;
 
     text-align: left;
 }
@@ -225,25 +225,27 @@ ol, ul {
 	padding:0;
 }
 .zf-tempFrmWrapper .zf-labelName {
-	font-weight: 300;
+	font-weight: 400;
     font-size: 14px;
-    color: #000000;
+    color: #101114;
 }
 .zf-form-sBox { 
 	padding: 9px 10px 10px 5px;
 	background: #fff;
-    border: 1px solid rgba(184, 187, 211, 1);
+	font-family: 'Poppins', sans-serif !important;
+    border: 1px solid #9C9EA3;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 14px;
+	font-weight: 400;
     height: 60px;
     transition: 0.3s;
     vertical-align: middle;
     position: relative;
-    color: rgba(37, 44, 62, 1);
+    color:#101114;
 }
 .zf-form-sBox:focus,.zf-form-sBox:focus:hover {
-	border: 1px solid #000000;
-	box-shadow: 0px 0px 2px 0px #000000;
+	border: 1px solid #101114;
+	box-shadow: 0px 0px 2px 0px #101114;
 	outline: none;
 }
 .zf-form-sBox::after {
@@ -264,10 +266,10 @@ ol, ul {
     overflow: visible !important;
     word-break: break-all;
     padding: 8px 0px 8px 0px;
-    font-weight: 300;
+    font-weight: 400;
 	}
 .zf-phone .zf-tempContDiv label, .zf-date .zf-tempContDiv label, .zf-time .zf-tempContDiv label, .zf-address .zf-tempContDiv label, .zf-name .zf-tempContDiv span label {
-	color: #000000;
+	color: #101114;
     
 }
 .zf-phone .zf-tempContDiv span label {
@@ -730,9 +732,11 @@ ol, ul {
 }
 
 .zf-submitColor {
-	color: #fff;
+	color:#6C6D73;
+	font-family: 'poppins', sans-serif !important;
     border: 1px solid transparent;
-    background: #a7abb2d1;
+	font-weight: 600;
+    background: #EBEBED;
     border-radius: 150px;
     min-width: 100px;
     transition: transform .25s cubic-bezier(0.33, 0.04, 0.63, 0.93), -webkit-transform .25s cubic-bezier(0.33, 0.04, 0.63, 0.93), -o-transform .25s cubic-bezier(0.33, 0.04, 0.63, 0.93);
