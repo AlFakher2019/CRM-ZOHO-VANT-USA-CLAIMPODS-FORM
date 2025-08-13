@@ -155,16 +155,16 @@
                                         </div>
                                         <div class="zf-clearBoth"></div>
                                     </div>
-                                    <div class="zf-tempFrmWrapper  zf-large "><label class="zf-labelName">
+                                     <div class="zf-tempFrmWrapper  zf-large "><label class="zf-labelName">
                                             Postal / Zip Code
                                             <em class="zf-important"> *</em>
                                         </label>
                                         <div class="zf-tempContDiv">
                                             <span>
-                                                <input type="text" name="SingleLine3" checktype="c1" value=""
-                                                    maxlength="255" fieldType=1 placeholder="" /> </span>
-                                            <p id="SingleLine3_error" class="zf-errorMessage" style="display: none;">
-                                                Invalid value</p>
+                                                <input type="text" name="Number" checktype="c2" value="" maxlength="18"
+                                                    fieldType=3 placeholder="" /> </span>
+                                            <p id="Number_error" class="zf-errorMessage" style="display: none;">Invalid
+                                                value</p>
                                         </div>
                                         <div class="zf-clearBoth"></div>
                                     </div>
@@ -187,7 +187,7 @@
                                             <em class="zf-important"> *</em>
                                         </label>
                                         <div class="zf-tempContDiv">
-                                            <select class="zf-form-sBox" name="Dropdown1" checktype="c1">
+                                            <select class="zf-form-sBox" name="Dropdown" checktype="c1">
                                                 <option selected="true" value="-Select-">Select an Option</option>
                                                 <option value="Alabama">Alabama</option>
                                                 <option value="Alaska">Alaska</option>
@@ -240,7 +240,7 @@
                                                 <option value="Wisconsin">Wisconsin</option>
                                                 <option value="Wyoming">Wyoming</option>
                                             </select>
-                                            <p id="Dropdown1_error" class="zf-errorMessage" style="display:none;">
+                                            <p id="Dropdown_error" class="zf-errorMessage" style="display:none;">
                                                 Invalid value</p>
                                         </div>
                                         <div class="zf-clearBoth"></div>
@@ -303,8 +303,8 @@
     <script type="text/javascript">var dateAndMonthRegexFormateArray = zf_SetDateAndMonthRegexBasedOnDateFormate('dd-MMM-yyyy');
         var zf_DateRegex = new RegExp(dateAndMonthRegexFormateArray[0]);
         var zf_MonthYearRegex = new RegExp(dateAndMonthRegexFormateArray[1]);
-        var zf_MandArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown2", "SingleLine", "SingleLine2", "SingleLine3", "Dropdown1"];
-        var zf_FieldArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown2", "SingleLine", "SingleLine2", "SingleLine3", "SingleLine1", "Dropdown1", "Radio1"];
+        var zf_MandArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown2", "SingleLine", "SingleLine2","Number", "Dropdown"];
+        var zf_FieldArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown2", "SingleLine", "SingleLine2","Number","SingleLine1", "Dropdown", "Radio1"];
         var isSalesIQIntegrationEnabled = false;
         var salesIQFieldsArray = [];</script>
 </body>
