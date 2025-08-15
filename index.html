@@ -8,6 +8,13 @@
     <script src="js/validation.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+        <style>
+  html, body {
+    overflow: hidden !important;
+    margin: 0;
+    padding: 0;
+  }
+</style>
 
 </head>
 
@@ -319,7 +326,7 @@
               let newHeight = formContainer.scrollHeight + 20;
               window.parent.postMessage(newHeight, '*');
               setTimeout(() => {
-                  document.body.style.overflow = "";
+                  document.body.style.overflow = "hidden";
               }, 300);
           }
       });
@@ -341,3 +348,4 @@
 </script>  
 
 </body>
+</html>
