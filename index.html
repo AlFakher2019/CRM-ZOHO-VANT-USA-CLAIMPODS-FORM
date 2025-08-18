@@ -310,48 +310,46 @@
 
 
   <script>
-  function updateHeight() {
-      requestAnimationFrame(() => {
-          let formContainer = document.querySelector("#form");
-          if (formContainer) {
-              formContainer.style.display = "block"; 
-              void formContainer.offsetHeight; 
+function updateHeight() {
+    requestAnimationFrame(() => {
+        const formContainer = document.querySelector("#form");
+        if (!formContainer) return;
 
-              let newHeight = formContainer.scrollHeight + 20;
+        formContainer.style.display = "block";
+        void formContainer.offsetHeight;
 
-              
-              window.parent.postMessage(
-                  {
-                      iframeHeight: newHeight,
-                      iframeId: window.name || document.title 
-                  },
-                  "*"
-              );
+        const newHeight = formContainer.scrollHeight + 20;
 
-              setTimeout(() => {
-                  document.body.style.overflow = "";
-              }, 300);
-          }
-      });
-  }
+        // Send the height to parent
+        window.parent.postMessage(newHeight, "*");
 
-  document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(updateHeight, 100);
-  });
+        setTimeout(() => {
+            document.body.style.overflow = "";
+        }, 300);
+    });
+}
 
-  document.addEventListener("click", function(event) {
-      if (event.target.matches(".next, .previous, .same")) {
-          setTimeout(updateHeight, 50);
-      }
-  });
+// Initial height after slight delay
+document.addEventListener("DOMContentLoaded", () => setTimeout(updateHeight, 100));
 
-  window.addEventListener("resize", updateHeight);
+// Update on clicks (multi-step forms)
+document.addEventListener("click", (event) => {
+    if (event.target.matches(".next, .previous, .same")) {
+        setTimeout(updateHeight, 50);
+    }
+});
 
-  const observer = new MutationObserver(() => {
-      updateHeight();
-  });
-  observer.observe(document.querySelector("#form"), { childList: true, subtree: true });
+// Update on window resize
+window.addEventListener("resize", updateHeight);
+
+// Watch for DOM changes inside the form
+const observer = new MutationObserver(updateHeight);
+observer.observe(document.querySelector("#form"), { childList: true, subtree: true });
+
+// Optional: repeat every 500ms if content changes asynchronously (e.g., lazy-loaded)
+setInterval(updateHeight, 500);
 </script>
+
 
 </body>
 </html>
