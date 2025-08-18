@@ -309,45 +309,33 @@
         var salesIQFieldsArray = [];</script>
 
 
-  <script>
+ <script>
 function updateHeight() {
-    requestAnimationFrame(() => {
-        const formContainer = document.querySelector("#form");
-        if (!formContainer) return;
+    const formContainer = document.querySelector("#form");
+    if (!formContainer) return;
 
-        formContainer.style.display = "block";
-        void formContainer.offsetHeight;
-
-        const newHeight = formContainer.scrollHeight + 20;
-
-        // Send the height to parent
-        window.parent.postMessage(newHeight, "*");
-
-        setTimeout(() => {
-            document.body.style.overflow = "";
-        }, 300);
-    });
+    const newHeight = formContainer.scrollHeight + 20;
+    window.parent.postMessage(newHeight, "*");
 }
 
-// Initial height after slight delay
-document.addEventListener("DOMContentLoaded", () => setTimeout(updateHeight, 100));
+// Repeat every 200ms until the height stops changing
+let lastHeight = 0;
+const heightInterval = setInterval(() => {
+    const formContainer = document.querySelector("#form");
+    if (!formContainer) return;
 
-// Update on clicks (multi-step forms)
-document.addEventListener("click", (event) => {
-    if (event.target.matches(".next, .previous, .same")) {
-        setTimeout(updateHeight, 50);
+    const currentHeight = formContainer.scrollHeight + 20;
+    if (currentHeight !== lastHeight) {
+        updateHeight();
+        lastHeight = currentHeight;
     }
+}, 200);
+
+// Also handle clicks and resize for multi-step forms
+document.addEventListener("click", (e) => {
+    if (e.target.matches(".next, .previous, .same")) setTimeout(updateHeight, 50);
 });
-
-// Update on window resize
 window.addEventListener("resize", updateHeight);
-
-// Watch for DOM changes inside the form
-const observer = new MutationObserver(updateHeight);
-observer.observe(document.querySelector("#form"), { childList: true, subtree: true });
-
-// Optional: repeat every 500ms if content changes asynchronously (e.g., lazy-loaded)
-setInterval(updateHeight, 500);
 </script>
 
 
