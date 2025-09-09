@@ -289,6 +289,17 @@
                             <div class="zf-clearBoth"></div>
                         </div>
                     </ul>
+                    <div class="zf-tempFrmWrapper zf-decesion ">
+                            <div class="zf-tempContDiv"><input type="checkbox" checktype="c1" id="DecisionBox"
+                                    name="DecisionBox" /><label for="DecisionBox" class="zf-labelName">
+                                    I confirm that I am 21 years old or above
+                                    <em class="zf-important">*</em>
+                                </label>
+                                <p id="DecisionBox_error" class="zf-errorMessage" style="display: none;">Invalid value
+                                </p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </div>
                 </div>
                 <ul>
                     <li class="zf-fmFooter"><button class="zf-submitColor">Submit</button></li>
@@ -303,7 +314,7 @@
     <script type="text/javascript">var dateAndMonthRegexFormateArray = zf_SetDateAndMonthRegexBasedOnDateFormate('dd-MMM-yyyy');
         var zf_DateRegex = new RegExp(dateAndMonthRegexFormateArray[0]);
         var zf_MonthYearRegex = new RegExp(dateAndMonthRegexFormateArray[1]);
-        var zf_MandArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown2", "SingleLine", "SingleLine2","Number", "Dropdown"];
+        var zf_MandArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown2", "SingleLine", "SingleLine2","Number", "Dropdown", "DecisionBox"];
         var zf_FieldArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown2", "SingleLine", "SingleLine2","Number","SingleLine1", "Dropdown", "Radio1"];
         var isSalesIQIntegrationEnabled = false;
         var salesIQFieldsArray = [];</script>
